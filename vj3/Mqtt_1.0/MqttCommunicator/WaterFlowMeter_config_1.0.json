@@ -1,0 +1,26 @@
+{
+  "serverURL" : "tcp://localhost:1883",
+  "topic" : "t1",
+  "sensorList" : [ {
+    "name" : "Temperature",
+    "factor" : 10,
+    "unit" : "°C",
+    "lowerLimit" : -2731,
+    "upperLimit" : 32668,
+    "currentValue" : 0.0
+  }, {
+    "name" : "Pressure",
+    "factor" : 1000,
+    "unit" : "Bar",
+    "lowerLimit" : 0,
+    "upperLimit" : 65336,
+    "currentValue" : 0.0
+  }, {
+    "name" : "Consumption",
+    "factor" : 1,
+    "unit" : "L",
+    "lowerLimit" : 0,
+    "upperLimit" : 65336,
+    "currentValue" : 0.0
+  } ]
+}
