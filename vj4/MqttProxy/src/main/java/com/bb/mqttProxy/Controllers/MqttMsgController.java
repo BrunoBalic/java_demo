@@ -14,7 +14,10 @@ public class MqttMsgController {
         try {
             MqttClient mqttClient = new MqttClient(message.getServerURL(), MqttClient.generateClientId());
             mqttClient.connect();
-            mqttClient.publish(message.getTopic(), new MqttMessage().setPayload(message.getMessage().getBytes()););
+            //mqttClient.publish(message.getTopic(), new MqttMessage().setPayload(message.getMessage().getBytes()););
+            MqttMessage mqttMessage = new MqttMessage();
+            mqttMessage.setPayload(message.getMessage().getBytes());
+            mqttClient.publish(message.getTopic(), mqttMessage);
             mqttClient.disconnect();
         } catch (MqttException e) {
             e.getMessage();
